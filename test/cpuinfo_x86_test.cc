@@ -1268,6 +1268,13 @@ FreeBSD is a registered trademark of The FreeBSD Foundation.
   Features2=0x5eda2203<SSE3,PCLMULQDQ,SSSE3,CX16,PCID,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,RDRAND>
 real memory  = 2147418112 (2047 MB)
 )");
+#elif defined(CPU_FEATURES_OS_OPENBSD)
+  auto& fs = GetEmptyFilesystem();
+  fs.CreateFile("/var/run/dmesg.boot", R"(
+  ---<<BOOT>>---
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: cpuid 1 edx=bfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE> ecx=77fafbbf<SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND>
+)");
 #elif defined(CPU_FEATURES_OS_LINUX) || defined(CPU_FEATURES_OS_ANDROID)
   auto& fs = GetEmptyFilesystem();
   fs.CreateFile("/proc/cpuinfo", R"(processor       :
@@ -1346,6 +1353,13 @@ FreeBSD is a registered trademark of The FreeBSD Foundation.
   Features=0x1783fbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE,SSE2,HTT>
   Features2=0x5eda2203<SSE3,PCLMULQDQ,SSSE3,CX16,PCID,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,RDRAND>
 real memory  = 2147418112 (2047 MB)
+)");
+#elif defined(CPU_FEATURES_OS_OPENBSD)
+  auto& fs = GetEmptyFilesystem();
+  fs.CreateFile("/var/run/dmesg.boot", R"(
+  ---<<BOOT>>---
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: cpuid 1 edx=bfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE> ecx=77fafbbf<SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND>
 )");
 #elif defined(CPU_FEATURES_OS_LINUX) || defined(CPU_FEATURES_OS_ANDROID)
   auto& fs = GetEmptyFilesystem();
@@ -1467,6 +1481,13 @@ Copyright (c) 1992-2020 The FreeBSD Project.
 FreeBSD is a registered trademark of The FreeBSD Foundation.
   Features=0x1783fbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE>
 real memory  = 2147418112 (2047 MB)
+)");
+#elif defined(CPU_FEATURES_OS_OPENBSD)
+  auto& fs = GetEmptyFilesystem();
+  fs.CreateFile("/var/run/dmesg.boot", R"(
+  ---<<BOOT>>---
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: cpuid 1 edx=bfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE>
 )");
 #elif defined(CPU_FEATURES_OS_LINUX) || defined(CPU_FEATURES_OS_ANDROID)
   auto& fs = GetEmptyFilesystem();

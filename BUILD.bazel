@@ -232,6 +232,7 @@ cc_library(
     srcs = selects.with_or({
         PLATFORM_CPU_X86: [
             "src/impl_x86_freebsd.c",
+            "src/impl_x86_openbsd.c",
             "src/impl_x86_linux_or_android.c",
             "src/impl_x86_macos.c",
             "src/impl_x86_windows.c",
@@ -295,6 +296,7 @@ cc_library(
     srcs = selects.with_or({
         PLATFORM_CPU_X86: [
             "src/impl_x86_freebsd.c",
+            "src/impl_x86_openbsd.c",
             "src/impl_x86_linux_or_android.c",
             "src/impl_x86_macos.c",
             "src/impl_x86_windows.c",

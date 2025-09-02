@@ -63,6 +63,7 @@ if(PROCESSOR_IS_X86)
   add_executable(cpuinfo_x86_test
     cpuinfo_x86_test.cc
     ../src/impl_x86_freebsd.c
+    ../src/impl_x86_openbsd.c
     ../src/impl_x86_linux_or_android.c
     ../src/impl_x86_macos.c
     ../src/impl_x86_windows.c
